@@ -10,7 +10,7 @@ import { CartService } from '../cart.service';
 })
 export class CartComponent implements OnInit {
   items;
-  checkoutForm
+  checkoutForm;
 
   constructor(
     private cartService: CartService,
@@ -26,7 +26,7 @@ export class CartComponent implements OnInit {
     this.items = this.cartService.getItems();
   }
 
-  onSummit(customerData) {
+  onSubmit(customerData) {
     // Process checkout datahere
     this.items = this.cartService.clearCart();
     this.checkoutForm.reset();
